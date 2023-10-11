@@ -1,0 +1,155 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+  }
+
+  body {
+    display: grid;
+  }
+
+  #headerWrapper {
+    grid-row-start: 1;
+  }
+
+  #navWrapper {
+    grid-row-start: 4;
+  }
+
+  div#hamburger a, div#closex a {
+    display: block;
+    padding: .8rem 2vw;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    text-align: right;
+  }
+
+  #headerWrapper {border-bottom: 1px solid #c3c3c3; }
+
+  header {
+    display: grid;
+    grid-template-columns: 51px auto 44px;
+    padding: .5rem 2vw;
+    gap: 10px;
+    align-items: center;
+     
+    h1{
+      color: #8C0927;
+      font: 2rem;
+    }
+  }
+
+  nav {
+    height: 100vh;
+    ul {border-bottom: 1px solid #eee;}
+    ul li {border-top: 1px solid #eee;
+    list-style-type: none;}
+    ul li a {
+      display: block;
+      color: #333;
+      padding: .9rem 2vw;
+      text-decoration: none;
+      text-align: right;
+    }
+    ul li a:hover {
+      color: #8C0927;
+    }
+    ul li.active {
+      background-color: #eee;
+    }
+  }
+
+  div#closex a {
+    margin-right: 2vw;
+  }
+
+  #mainWrapper {
+    grid-row-start: 2;
+  }
+
+  main {
+    h1{padding: .5rem $gutter;}
+    p {padding-left: $gutter;}
+  }
+
+  form.my-form {
+    margin: 1rem $gutter;
+    label {
+      display: block;
+      font-size: .8rem;
+      color: black;
+      padding-top: .2rem;
+    }
+    h3 {
+      font-size: .9rem;
+      color: #252525;
+      margin: 1.5rem 0 .2rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    input[type=text],
+    input[type=tel],
+    input[type=number],
+    input[type=email],
+    input[type=date],
+    input[type=password],
+    select {
+      display: block;
+      margin: .1rem 0 .1rem 0;
+      border: 1px solid #999;
+      border-radius: 3px 10px 10px 3px;
+      border-left-width: 5px;
+      border-left-color: #555;
+      font-size: 1rem;
+      color: rgb(0, 0, 0);
+      width: 250px;
+      padding: .5rem $gutter;
+    }
+    input:required {
+      border-left-color: #00A86B;
+    }
+    input:focus {
+      border-left-color: black;
+    }
+    input:required:valid {
+      border-left-color: green;
+    }
+
+
+    input[type=submit] {
+      border: none;
+      background-color: #8C0927;
+      color: white;
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      margin: 2rem 0;
+      width: 250px;
+      font-size: 1.2rem;
+      -webkit-appearance: none;
+      appearance:none;
+    }
+    }
+  
+    #footerWrapper {
+      grid-row-start: 3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1.1rem;
+      padding: .6rem;
+      background-color: #eee;
+    }
+  

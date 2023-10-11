@@ -1,0 +1,17 @@
+#headerWrapper {grid-row-start: 1;}
+#navWrapper {grid-row-start: 2;}
+div#hamburger, div#closex {
+    display: none;
+}
+nav {
+    height: auto;
+    ul {
+        display: flex;
+        justify-content: end;
+        border: none;}
+        li {
+            border: none;
+        }
+}
+#mainWrapper {grid-row-start: 3;}
+#footerWrapper {grid-row-start: 4;}
