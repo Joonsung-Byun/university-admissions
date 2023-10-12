@@ -442,7 +442,7 @@ form.my-form input:focus {
   border-left-color: black;
 }
 form.my-form input:required:valid {
-  border-left-color: green;
+  border-left-color: rgb(50, 0, 252);
 }
 form.my-form input[type=submit] {
   border: none;
